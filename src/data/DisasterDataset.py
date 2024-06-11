@@ -10,10 +10,10 @@ class DisasterDataset(Dataset):
         self,
         tweets: list[str],
         targets: list[int],
-        emb_fn: Callable[[list[str]], list[float]],
+        emb_fn: Callable[[list[str]], torch.Tensor],
         tokenizer: Callable[[str], list[str]],
     ) -> None:
-        self.data: list[Dict[str, torch.FloatTensor]] = []
+        self.data: list[Dict[str, torch.Tensor]] = []
         assert len(tweets) == len(
             targets
         ), "The arrays tweets and targets should have the same length."
@@ -22,9 +22,7 @@ class DisasterDataset(Dataset):
             self.data.append(
                 {
                     # tokenize and embed sentence
-                    "tweet": torch.tensor(
-                        emb_fn(tokenizer(tweet)), dtype=torch.float32
-                    ),
+                    "tweet": emb_fn(tokenizer(tweet)),
                     "target": torch.tensor(target, dtype=torch.float32),
                 }
             )
