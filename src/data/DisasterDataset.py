@@ -23,7 +23,7 @@ class DisasterDataset(Dataset):
                 {
                     # tokenize and embed sentence
                     "tweet": emb_fn(tokenizer(tweet)),
-                    "target": torch.tensor(target, dtype=torch.float32),
+                    "target": torch.tensor(target, dtype=torch.float),
                 }
             )
 
