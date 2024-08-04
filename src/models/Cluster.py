@@ -28,10 +28,13 @@ class ClusterModel:
         self.tokenizer = AutoTokenizer.from_pretrained(model_name)
         self.model.to(device)
 
-    def predict(self, input_texts):
-        embeddings = self.get_embeddings(input_texts)
-        predictions = self.kmeans.predict(embeddings.cpu().detach().numpy())
-        res = [self.cluster_label_map[predictions[i]] for i in range(len(predictions))]
+    def predict(self, inputs, input_is_text=False):
+        if input_is_text:
+            embeddings = self.get_embeddings(inputs).cpu().detach().numpy()
+        else:
+            embeddings = inputs
+        predictions = self.kmeans.predict(embeddings)
+        res = [self.purity_map[p]["label"] for p in predictions.tolist()]
         return res
 
     def get_embeddings(self, input_texts):
@@ -63,12 +66,15 @@ class ClusterModel:
         pass
 
     def purity_score(self):
-        purity_map = {c: 0 for c in range(self.num_clusters)}
+        purity_map = {c: {0: 0, 1: 0, "mean": 0, "label": None} for c in range(self.num_clusters)}
         for c_id, v in self.cluster_label_map.items():
             sum_of_ones = sum(v)
             sum_of_zeros = len(v) - sum_of_ones
             purity = max(sum_of_ones, sum_of_zeros) / len(v)
-            purity_map[c_id] = purity
+            purity_map[c_id][0] = sum_of_zeros
+            purity_map[c_id][1] = sum_of_ones
+            purity_map[c_id]["label"] = 0 if sum_of_zeros >= sum_of_ones else 1
+            purity_map[c_id]["mean"] = purity
         self.purity_map = purity_map
         return purity_map
 
