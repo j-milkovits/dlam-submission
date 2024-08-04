@@ -3,10 +3,10 @@ from torch.nn import Linear, Module, ReLU, Sequential, Sigmoid
 
 
 class SimpleMLP(Module):
-    def __init__(self) -> None:
+    def __init__(self, input_size: int = 300) -> None:
         super(SimpleMLP, self).__init__()
         self.mlp_stack = Sequential(
-            Linear(300, 600),
+            Linear(input_size, 600),
             ReLU(),
             Linear(600, 300),
             ReLU(),
