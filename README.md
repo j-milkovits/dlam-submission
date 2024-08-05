@@ -15,10 +15,10 @@
 
 
 ## Results
-| Model      | Embedding | F1 Score |
-|------------|-----------|----------|
-| Clustering | e5        | 0.79619  |
-| SimpleMLP  | e5        | 0.78915  |
-| SimpleMLP  | word2vec  | 0.78605  |
-
+| Model                                                     | Embedding | F1 Score |
+|-----------------------------------------------------------|-----------|----------|
+| Clustering                                                | e5        | 0.79619  |
+| SimpleMLP                                                 | e5        | 0.78915  |
+| SimpleMLP                                                 | word2vec  | 0.78605  |
+| Ensemble of Clustering (e5) and SimpleMLP (e5 & word2vec) | -         | 0.81458  |
 
