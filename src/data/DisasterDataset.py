@@ -3,6 +3,7 @@ from typing import Callable, Dict, Tuple
 import pandas as pd
 import torch
 from torch.utils.data import Dataset
+from tqdm import tqdm
 
 
 class DisasterDataset(Dataset):
@@ -18,7 +19,7 @@ class DisasterDataset(Dataset):
             targets
         ), "The arrays tweets and targets should have the same length."
         zipped_items = zip(tweets, targets)
-        for tweet, target in zipped_items:
+        for tweet, target in tqdm(zipped_items, desc="Tokenizing and Embedding", total=len(tweets)):
             self.data.append(
                 {
                     # tokenize and embed sentence
@@ -45,6 +46,12 @@ def load_disaster_train_dataset(path: str) -> Tuple[
     )
 
 
-def load_disaster_test_dataset(path: str) -> list[str]:
+def load_disaster_test_dataset(path: str) -> Tuple[
+    list[str],
+    list[int],
+]:
     df = pd.read_csv(path, sep=",")
-    return list(df["text"].values)
+    return (
+        list(df["text"].values),
+        list(df["id"].values),
+    )
