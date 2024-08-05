@@ -20,6 +20,10 @@ def average_pool(last_hidden_states: Tensor,
 
 
 def batch_embed_tweets(model, tweets, batch_size=32):
+    # For the e5 model
+    # Prepend "query: " to each tweet
+    tweets = ["query: " + tweet for tweet in tweets]
+
     num_tweets = len(tweets)
     # Pre-allocate the numpy array for embeddings
     embedding_dim = 1024

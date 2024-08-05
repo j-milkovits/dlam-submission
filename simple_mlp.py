@@ -63,8 +63,10 @@ def main(embedder: str):
 
     tweets, targets = load_disaster_train_dataset("./datasets/disaster/train.csv")
     # tweets, targets = tweets[:100], targets[:100]
-    train_dataset = DisasterDataset(tweets, targets, emb_fn, tokenizer)
+    if embedder == "e5":
+        tweets = ["query: " + tweet for tweet in tweets]
 
+    train_dataset = DisasterDataset(tweets, targets, emb_fn, tokenizer)
     train_dataloader = DataLoader(
         train_dataset, batch_size=batch_size, shuffle=True, drop_last=True
     )
