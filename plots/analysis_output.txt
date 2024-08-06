@@ -1,0 +1,185 @@
+Training dataset shape: (7613, 5)
+
+Training dataset columns: Index(['id', 'keyword', 'location', 'text', 'target'], dtype='object')
+
+Training dataset info:
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 7613 entries, 0 to 7612
+Data columns (total 5 columns):
+ #   Column    Non-Null Count  Dtype
+---  ------    --------------  -----
+ 0   id        7613 non-null   int64
+ 1   keyword   7613 non-null   object
+ 2   location  5080 non-null   object
+ 3   text      7613 non-null   object
+ 4   target    7613 non-null   int64
+dtypes: int64(2), object(3)
+memory usage: 297.5+ KB
+
+Training dataset sample:
+   id keyword location                                               text  target
+0   1    None      NaN  Our Deeds are the Reason of this #earthquake M...       1
+1   4    None      NaN             Forest fire near La Ronge Sask. Canada       1
+2   5    None      NaN  All residents asked to 'shelter in place' are ...       1
+3   6    None      NaN  13,000 people receive #wildfires evacuation or...       1
+4   7    None      NaN  Just got sent this photo from Ruby #Alaska as ...       1
+
+Test dataset shape: (3263, 4)
+
+Test dataset columns: Index(['id', 'keyword', 'location', 'text'], dtype='object')
+
+Test dataset info:
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 3263 entries, 0 to 3262
+Data columns (total 4 columns):
+ #   Column    Non-Null Count  Dtype
+---  ------    --------------  -----
+ 0   id        3263 non-null   int64
+ 1   keyword   3263 non-null   object
+ 2   location  2158 non-null   object
+ 3   text      3263 non-null   object
+dtypes: int64(1), object(3)
+memory usage: 102.1+ KB
+
+Test dataset sample:
+   id keyword location                                               text
+0   0    None      NaN                 Just happened a terrible car crash
+1   2    None      NaN  Heard about #earthquake is different cities, s...
+2   3    None      NaN  there is a forest fire at spot pond, geese are...
+3   9    None      NaN           Apocalypse lighting. #Spokane #wildfires
+4  11    None      NaN      Typhoon Soudelor kills 28 in China and Taiwan
+
+Target distribution:
+target
+0    4342
+1    3271
+Name: count, dtype: int64
+
+Top 20 keywords (Train):
+keyword
+NaN           61
+fatalities    45
+deluge        42
+armageddon    42
+sinking       41
+damage        41
+harm          41
+body bags     41
+evacuate      40
+fear          40
+outbreak      40
+siren         40
+twister       40
+windstorm     40
+collided      40
+sinkhole      39
+sunk          39
+hellfire      39
+weapon        39
+weapons       39
+Name: count, dtype: int64
+
+Number of unique keywords (Train): 221
+Number of tweets without keyword (Train): 61
+  - 'None' values: 61
+  - NaN values: 0
+
+Top 20 keywords (Test):
+keyword
+NaN                 26
+deluged             23
+demolished          22
+rubble              22
+snowstorm           21
+sirens              21
+annihilation        21
+seismic             21
+obliteration        21
+first responders    21
+dead                20
+survivors           20
+mayhem              20
+avalanche           20
+catastrophic        20
+bioterrorism        20
+trauma              19
+wild fires          19
+devastated          19
+crushed             19
+Name: count, dtype: int64
+
+Number of unique keywords (Test): 221
+Number of tweets without keyword (Test): 26
+  - 'None' values: 26
+  - NaN values: 0
+
+Top 20 locations (Train):
+location
+NaN                2533
+USA                 104
+New York             71
+United States        50
+London               45
+Canada               29
+Nigeria              28
+UK                   27
+Los Angeles, CA      26
+India                24
+Mumbai               22
+Washington, DC       21
+Kenya                20
+Worldwide            19
+Chicago, IL          18
+Australia            18
+California           17
+New York, NY         15
+Everywhere           15
+California, USA      15
+Name: count, dtype: int64
+
+Number of unique locations (Train): 3341
+Number of tweets without location (Train): 2533
+  - 'None' values: 0
+  - NaN values: 2533
+
+Top 20 locations (Test):
+location
+NaN                  1105
+New York               38
+USA                    37
+Worldwide              16
+United States          15
+Canada                 13
+London                 13
+Kenya                  12
+United Kingdom         12
+Nigeria                12
+India                  11
+Los Angeles            11
+Washington, DC         10
+San Francisco, CA       9
+San Francisco           9
+NYC                     9
+Philippines             9
+Los Angeles, CA         8
+California              8
+Australia               7
+Name: count, dtype: int64
+
+Number of unique locations (Test): 1602
+Number of tweets without location (Test): 1105
+  - 'None' values: 0
+  - NaN values: 1105
+
+Keyword Analysis:
+Number of unique keywords in train set: 222
+Number of unique keywords in test set: 222
+Number of overlapping keywords: 222
+Percentage of train keywords in test: 100.00%
+Percentage of test keywords in train: 100.00%
+
+Keywords in test but not in train:
+set()
+
+Keywords in train but not in test:
+set()
