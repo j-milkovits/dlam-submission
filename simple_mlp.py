@@ -67,6 +67,7 @@ def main(embedder: str):
         tweets = ["query: " + tweet for tweet in tweets]
 
     train_dataset = DisasterDataset(tweets, targets, emb_fn, tokenizer)
+
     train_dataloader = DataLoader(
         train_dataset, batch_size=batch_size, shuffle=True, drop_last=True
     )

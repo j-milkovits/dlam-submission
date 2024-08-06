@@ -21,4 +21,3 @@
 | SimpleMLP                                                 | e5        | 0.78915  | Decreased with "query: " prefix to 0.71314       |
 | SimpleMLP                                                 | word2vec  | 0.78605  |                                                  |
 | Ensemble of Clustering (e5) and SimpleMLP (e5 & word2vec) | -         | 0.81887  | With query prefix for clustering but not for MLP |
-
