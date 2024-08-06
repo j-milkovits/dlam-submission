@@ -21,5 +21,7 @@ if __name__ == "__main__":
         "./datasets/disaster/clustering_test_predictions.csv",
         "./datasets/disaster/test_predictions_e5.csv",
         "./datasets/disaster/test_predictions_word2vec.csv",
+        "./datasets/disaster/test_predictions_bert.csv",
+        "./datasets/disaster/test_predictions_bert.csv",
     ]
     main(files)
