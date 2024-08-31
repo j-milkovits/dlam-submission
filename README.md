@@ -27,10 +27,10 @@
 | 8   | Ensemble of 1, 2, 3, 5, 5 + 2* BERT large | -         | 0.84186  | With query prefix for clustering but not for MLP for e5 | Marlon |
 | 9   | RNN                                       |           |          |                                                         | Seska  |
 | 10  | LSTM                                      |           |          |                                                         | Seska  |
-| 11  | API query (GPT4o-mini) zero shot          |           | 0.76616  | Prompt can be found in the script                       | Markus |
+| 11  | API query (GPT4o-mini) zero shot          | -         | 0.76616  | Prompt can be found in the script                       | Markus |
 | 12  | SimpleMLP with encoder Roberta            |           |          |                                                         | Jonas  |
 | 13  | Nearst neighbour                          |           |          |                                                         | Jonas  |
 | 14  | Bernice and co.                           |           |          |                                                         | Fred   |
-| 15  | API query (GPT4o-mini) one shot           |           | 0.78884  |                                                         | Markus |
-| 16  | API query (GPT4o-mini) ten shot           |           | 0.74961  |                                                         | Markus |
-| 17  | API query (GPT4o) one shot                |           | 0.76432  |                                                         | Markus |
+| 15  | API query (GPT4o-mini) one shot           | -         | 0.78884  |                                                         | Markus |
+| 16  | API query (GPT4o-mini) ten shot           | -         | 0.74961  |                                                         | Markus |
+| 17  | API query (GPT4o) one shot                | -         | 0.76432  |                                                         | Markus |
