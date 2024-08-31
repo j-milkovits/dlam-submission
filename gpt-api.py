@@ -105,8 +105,6 @@ def main(model, shots):
     # load data
     test_tweets, test_ids = load_disaster_test_dataset("./datasets/disaster/test.csv")
     train_tweets, targets = load_disaster_train_dataset("./datasets/disaster/train.csv")
-    # print(test_tweets[:5])
-    # print("\n", test_ids[:5])
 
     # Define the tweets from the train dataset that are provided to the prompt
     tweet_shots = []
@@ -127,13 +125,13 @@ def main(model, shots):
     #print(predictions)
     # write predictions to csv
     df = pd.DataFrame({"id": test_ids, "target": predictions})
-    df.to_csv(f"./datasets/disaster/test_predictions_gpt4_{shots}_shot.csv", index=False)
+    df.to_csv(f"./datasets/disaster/test_predictions_{model}_{shots}_shot.csv", index=False)
 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--model", type=str, default="gpt-4o-mini", help="Select the gpt model to use.")
-    parser.add_argument("--shots", type=int, default=10, choices=[0, 1, 10], help="Select the number of example shots that are proesented to the API.")
+    parser.add_argument("--model", type=str, default="gpt-4o-mini", help="Select the gpt model to use.")  # "gpt-4o"
+    parser.add_argument("--shots", type=int, default=1, choices=[0, 1, 10], help="Select the number of example shots that are proesented to the API.")
     args = parser.parse_args()
 
     main(model=args.model, shots=args.shots)
