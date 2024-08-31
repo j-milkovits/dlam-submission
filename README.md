@@ -31,5 +31,5 @@
 | 12  | SimpleMLP with encoder Roberta            |           |          |                                                         | Jonas  |
 | 13  | Nearst neighbour                          |           |          |                                                         | Jonas  |
 | 14  | Bernice and co.                           |           |          |                                                         | Fred   |
-| 15  | API query (GPT4o-mini) one shot           |           |          |                                                         | Markus |
-| 15  | API query (GPT4o-mini) ten shot           |           |          |                                                         | Markus |
+| 15  | API query (GPT4o-mini) one shot           |           | 0.78915  |                                                         | Markus |
+| 16  | API query (GPT4o-mini) ten shot           |           |          |                                                         | Markus |
