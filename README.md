@@ -32,4 +32,4 @@
 | 13  | Nearst neighbour                          |           |          |                                                         | Jonas  |
 | 14  | Bernice and co.                           |           |          |                                                         | Fred   |
 | 15  | API query (GPT4o-mini) one shot           |           | 0.78915  |                                                         | Markus |
-| 16  | API query (GPT4o-mini) ten shot           |           |          |                                                         | Markus |
+| 16  | API query (GPT4o-mini) ten shot           |           | 0.74961  |                                                         | Markus |

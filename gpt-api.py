@@ -37,16 +37,16 @@ ten_shot_prompt = """You are an AI assistant trained to recognize whether a twee
                 0 if the tweet is not about a real disaster.
 
                 Here are some examples:
-                    Example Tweet 1: "[example_tweet1]" (Desaster Classification: [desaster1])
-                    Example Tweet 2: "[example_tweet2]" (Desaster Classification: [desaster2])
-                    Example Tweet 3: "[example_tweet3]" (Desaster Classification: [desaster3])
-                    Example Tweet 4: "[example_tweet4]" (Desaster Classification: [desaster4])
-                    Example Tweet 5: "[example_tweet5]" (Desaster Classification: [desaster5])
-                    Example Tweet 6: "[example_tweet6]" (Desaster Classification: [desaster6])
-                    Example Tweet 7: "[example_tweet7]" (Desaster Classification: [desaster7])
-                    Example Tweet 8: "[example_tweet8]" (Desaster Classification: [desaster8])
-                    Example Tweet 9: "[example_tweet9]" (Desaster Classification: [desaster9])
-                    Example Tweet 10: "[example_tweet10]" (Desaster Classification: [desaster10])
+                    Example Tweet 1: "[example_tweet0]" (Desaster Classification: [desaster0])
+                    Example Tweet 2: "[example_tweet1]" (Desaster Classification: [desaster1])
+                    Example Tweet 3: "[example_tweet2]" (Desaster Classification: [desaster2])
+                    Example Tweet 4: "[example_tweet3]" (Desaster Classification: [desaster3])
+                    Example Tweet 5: "[example_tweet4]" (Desaster Classification: [desaster4])
+                    Example Tweet 6: "[example_tweet5]" (Desaster Classification: [desaster5])
+                    Example Tweet 7: "[example_tweet6]" (Desaster Classification: [desaster6])
+                    Example Tweet 8: "[example_tweet7]" (Desaster Classification: [desaster7])
+                    Example Tweet 9: "[example_tweet8]" (Desaster Classification: [desaster8])
+                    Example Tweet 10: "[example_tweet9]" (Desaster Classification: [desaster9])
 
                 Tweet for prediction: "[test_tweet]"
             """
@@ -78,7 +78,7 @@ def construct_prompt(shots, tweet_shots, test_tweet):
     elif shots == 10:
         assert len(tweet_shots) >= 10
         prompt[0]['content'] = ten_shot_prompt
-        for i in shots:
+        for i in range(shots):
             prompt[0]['content'] = prompt[0]['content'].replace(f"[example_tweet{i}]", tweet_shots[i][0])
             prompt[0]['content'] = prompt[0]['content'].replace(f"[desaster{i}]", str(tweet_shots[i][1]))
     else:
@@ -110,8 +110,9 @@ def main(model, shots):
 
     # Define the tweets from the train dataset that are provided to the prompt
     tweet_shots = []
+    use_tweets_idx = [0, 1, 2, 3, 4, 20, 21, 22, 23, 24]
     for i in range(shots):
-        tweet_shots.append((train_tweets[i], targets[i]))
+        tweet_shots.append((train_tweets[use_tweets_idx[i]], targets[use_tweets_idx[i]]))
     #print(tweet_shots)
 
     # Loop through the test tweets
@@ -132,7 +133,7 @@ def main(model, shots):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--model", type=str, default="gpt-4o-mini", help="Select the gpt model to use.")
-    parser.add_argument("--shots", type=int, default=1, choices=[0, 1, 10], help="Select the number of example shots that are proesented to the API.")
+    parser.add_argument("--shots", type=int, default=10, choices=[0, 1, 10], help="Select the number of example shots that are proesented to the API.")
     args = parser.parse_args()
 
     main(model=args.model, shots=args.shots)
