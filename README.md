@@ -34,5 +34,7 @@
 | 15 | API query (GPT4o-mini) one shot           | -         | 0.78884  |                                                         | Markus |
 | 16 | API query (GPT4o-mini) ten shot           | -         | 0.74961  |                                                         | Markus |
 | 17 | API query (GPT4o) one shot                | -         | 0.76432  |                                                         | Markus |
-| 18 | BERT Ensemble                             | BERT      | 0.83726  | 5 different seeds                                       | Marlon |
-| 19 | BERT Ensemble                             | BERT      | 0.84033  | 11 different seeds                                      | Marlon |
+| 18 | BERT Ensemble                             | BERT      | 0.83726  | voting - 5 different seeds                              | Marlon |
+| 19 | BERT Ensemble                             | BERT      | 0.84033  | voting - 11 different seeds                             | Marlon |
+| 20 | BERT Ensemble                             | BERT      | 0.84002  | value averaging - 5 different seeds                     | Marlon |
+| 21 | BERT Ensemble                             | BERT      | 0.84278  | value averaging - 21 different seeds - dropout rate 0.4 | Marlon |
