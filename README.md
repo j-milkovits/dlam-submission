@@ -23,7 +23,7 @@
 | 4  | Ensemble of 1, 2, 3                       | -         | 0.81887  | With query prefix for clustering but not for MLP for e5 | Marlon |
 | 5  | Simple BERT Classifier                    | BERT      | 0.84216  |                                                         | Marlon |
 | 6  | Ensemble of 1, 2, 3, 5, 5                 | -         | 0.84278  | With query prefix for clustering but not for MLP for e5 | Marlon |
-| 7  | BERT Large Classifier                     | BERT      | 0.83604  | 4 Epochs & 64 Batch size                                | Marlon |
+| 7  | BERT large Classifier                     | BERT      | 0.83604  | 4 Epochs & 64 Batch size                                | Marlon |
 | 8  | Ensemble of 1, 2, 3, 5, 5 + 2* BERT large | -         | 0.84186  | With query prefix for clustering but not for MLP for e5 | Marlon |
 | 9  | RNN                                       |           |          |                                                         | Seska  |
 | 10 | LSTM                                      |           |          |                                                         | Seska  |
@@ -38,3 +38,5 @@
 | 19 | BERT Ensemble                             | BERT      | 0.84033  | voting - 11 different seeds                             | Marlon |
 | 20 | BERT Ensemble                             | BERT      | 0.84002  | value averaging - 5 different seeds                     | Marlon |
 | 21 | BERT Ensemble                             | BERT      | 0.84278  | value averaging - 21 different seeds - dropout rate 0.4 | Marlon |
+| 22 | BERT large Ensemble                       | BERT      | 0.84492  | value averaging - 11 different seeds - dropout rate 0.4 | Marlon |
+| 23 | roBERTa large Ensemble                    | roBERTa   | 0.84707  | value averaging - 11 different seeds - dropout rate 0.4 | Marlon |
