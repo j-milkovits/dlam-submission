@@ -27,7 +27,6 @@
 | 8  | Ensemble of 1, 2, 3, 5, 5 + 2* BERT large | -         | 0.84186  | With query prefix for clustering but not for MLP for e5 | Marlon |
 | 9  | RNN                                       |           |          |                                                         | Seska  |
 | 10 | LSTM                                      |           |          |                                                         | Seska  |
-| 11 | API query (GPT4o-mini) zero shot          | -         | 0.76616  | Prompt can be found in the script                       | Markus |
 | 12 | SimpleMLP with encoder Roberta            | Roberta   | 0.84002  | Epochs: 2 / Batchsize: 64                               | Jonas  |
 | 13 | KNN                                       | Roberta   | 0.73613  | k: 2                                                    | Jonas  |
 | 14 | KNN                                       | Roberta   | 0.72939  | k: 3                                                    | Jonas  |
@@ -36,6 +35,7 @@
 | 17 | KNN                                       | Roberta   | 0.73797  | k: 10                                                   | Jonas  |
 | 18 | KNN                                       | Roberta   | 0.73858  | k: 20                                                   | Jonas  |
 | 19 | Bernice and co.                           |           |          |                                                         | Fred   |
+| 11 | API query (GPT4o-mini) zero shot          | -         | 0.76616  | Prompt can be found in the script                       | Markus |
 | 20 | API query (GPT4o-mini) one shot           | -         | 0.78884  |                                                         | Markus |
 | 21 | API query (GPT4o-mini) ten shot           | -         | 0.74961  |                                                         | Markus |
 | 22 | API query (GPT4o) one shot                | -         | 0.76432  |                                                         | Markus |
