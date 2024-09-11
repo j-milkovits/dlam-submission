@@ -45,3 +45,17 @@
 | 26 | BERT Ensemble                             | BERT      | 0.84278  | value averaging - 21 different seeds - dropout rate 0.4 | Marlon |
 | 27 | BERT large Ensemble                       | BERT      | 0.84492  | value averaging - 11 different seeds - dropout rate 0.4 | Marlon |
 | 28 | roBERTa large Ensemble                    | roBERTa   | 0.84707  | value averaging - 11 different seeds - dropout rate 0.4 | Marlon |
+
+## Future Directions
+- Further Finetuning of a large LLM (e.g. GPT4o-mini)
+
+## Presentation Notes (300s)
+- Vorstellung (15s)
+- Motivation + Dataset | Challenge (45s)
+- Clustering (kNN) (30s)
+- BERT + ROBERTA + Bernice + BertTweet (45s)
+- Ensemble (30s)
+- RNN/LSTM (45s)
+- GPT-4o | API (45s)
+- Fazit (30s)
+- Future Directions (15s)
