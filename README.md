@@ -30,13 +30,14 @@
 | 11 | API query (GPT4o-mini) zero shot          | -         | 0.76616  | Prompt can be found in the script                       | Markus |
 | 12 | SimpleMLP with encoder Roberta            | Roberta   | 0.84002  | Epochs: 2 / Batchsize: 64                               | Jonas  |
 | 13 | KNN                                       | Roberta   | 0.73919  | k: 5                                                    | Jonas  |
-| 14 | Bernice and co.                           |           |          |                                                         | Fred   |
-| 15 | API query (GPT4o-mini) one shot           | -         | 0.78884  |                                                         | Markus |
-| 16 | API query (GPT4o-mini) ten shot           | -         | 0.74961  |                                                         | Markus |
-| 17 | API query (GPT4o) one shot                | -         | 0.76432  |                                                         | Markus |
-| 18 | BERT Ensemble                             | BERT      | 0.83726  | voting - 5 different seeds                              | Marlon |
-| 19 | BERT Ensemble                             | BERT      | 0.84033  | voting - 11 different seeds                             | Marlon |
-| 20 | BERT Ensemble                             | BERT      | 0.84002  | value averaging - 5 different seeds                     | Marlon |
-| 21 | BERT Ensemble                             | BERT      | 0.84278  | value averaging - 21 different seeds - dropout rate 0.4 | Marlon |
-| 22 | BERT large Ensemble                       | BERT      | 0.84492  | value averaging - 11 different seeds - dropout rate 0.4 | Marlon |
-| 23 | roBERTa large Ensemble                    | roBERTa   | 0.84707  | value averaging - 11 different seeds - dropout rate 0.4 | Marlon |
+| 14 | Bernice                                   | Roberta   | 0.83144  |                                                         | Fred   |
+| 15 | Bertweet                                  | BERT      | 0.82960  |                                                         | Fred   |
+| 16 | API query (GPT4o-mini) one shot           | -         | 0.78884  |                                                         | Markus |
+| 17 | API query (GPT4o-mini) ten shot           | -         | 0.74961  |                                                         | Markus |
+| 18 | API query (GPT4o) one shot                | -         | 0.76432  |                                                         | Markus |
+| 19 | BERT Ensemble                             | BERT      | 0.83726  | voting - 5 different seeds                              | Marlon |
+| 20 | BERT Ensemble                             | BERT      | 0.84033  | voting - 11 different seeds                             | Marlon |
+| 21 | BERT Ensemble                             | BERT      | 0.84002  | value averaging - 5 different seeds                     | Marlon |
+| 22 | BERT Ensemble                             | BERT      | 0.84278  | value averaging - 21 different seeds - dropout rate 0.4 | Marlon |
+| 23 | BERT large Ensemble                       | BERT      | 0.84492  | value averaging - 11 different seeds - dropout rate 0.4 | Marlon |
+| 24 | roBERTa large Ensemble                    | roBERTa   | 0.84707  | value averaging - 11 different seeds - dropout rate 0.4 | Marlon |
