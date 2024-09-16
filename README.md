@@ -1,20 +1,22 @@
 # DLAM Submission
+
 ## Embeddings
+
 ### word2vec
+
 - [Download](https://drive.google.com/file/d/0B7XkCwpI5KDYNlNUTTlSS21pQmM/edit?resourcekey=0-wjGZdNAUop6WykTtMip30g)
 - Extract and put in /embeddings
 
 ### FastText
+
 - [Download](https://dl.fbaipublicfiles.com/fasttext/vectors-english/wiki-news-300d-1M.vec.zip)
 - Extract and put in /embeddings
 
 ## Models
-### Clustering
-
-### SimpleMLP
 
 
 ## Results
+
 | #  | Model                                     | Embedding | F1 Score | Note                                                    | Author |
 |----|-------------------------------------------|-----------|----------|---------------------------------------------------------|--------|
 | 1  | Clustering                                | e5        | 0.80263  | Improved from 0.79619 with "query: " prefix             | Marlon |
@@ -47,6 +49,7 @@
 | 28 | BERT Ensemble                             | BERT      | 0.84278  | value averaging - 21 different seeds - dropout rate 0.4 | Marlon |
 | 29 | BERT large Ensemble                       | BERT      | 0.84492  | value averaging - 11 different seeds - dropout rate 0.4 | Marlon |
 | 30 | roBERTa large Ensemble                    | roBERTa   | 0.84707  | value averaging - 11 different seeds - dropout rate 0.4 | Marlon |
+| 31 | roBERTa large                             | roBERTa   | 0.83358  |                                                         | Marlon |
 
 ## Future Directions
 - Further Finetuning of a large LLM (e.g. GPT4o-mini)
