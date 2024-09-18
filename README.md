@@ -27,8 +27,8 @@
 | 6  | Ensemble of 1, 2, 3, 5, 5                 | -         | 0.84278  | With query prefix for clustering but not for MLP for e5 | Marlon |
 | 7  | BERT large Classifier                     | BERT      | 0.83604  | 4 Epochs & 64 Batch size                                | Marlon |
 | 8  | Ensemble of 1, 2, 3, 5, 5 + 2* BERT large | -         | 0.84186  | With query prefix for clustering but not for MLP for e5 | Marlon |
-| 9  | RNN                                       |           |          |                                                         | Seska  |
-| 10 | LSTM                                      |           |          |                                                         | Seska  |
+| 9  | RNN                                       | word2vec  | 0.77566  |                                                         | Seska  |
+| 10 | LSTM                                      | word2vec  | 0.78486  |                                                         | Seska  |
 | 11 | SimpleMLP with encoder Roberta            | Roberta   | 0.84002  | Epochs: 2 / Batchsize: 64                               | Jonas  |
 | 12 | KNN                                       | Roberta   | 0.73919  | k: 5                                                    | Jonas  |
 | 13 | KNN                                       | Roberta   | 0.73613  | k: 2                                                    | Jonas  |
